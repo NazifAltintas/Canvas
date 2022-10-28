@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nazif Altintas</title>
+    <link rel="stylesheet" href="styles.css" type="text/css" />
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+  </head>
+  <body style="overflow: hidden">
+    <canvas id="canvas"></canvas>
+
+    <div class="popup-wrap">
+      <div class="popup-box" id="modal">
+        <div class="popup">
+          <button onClick="save_paint()" type="button" class="button">
+            Save
+          </button>
+          <button onClick="clear_canvas()" type="button" class="button">
+            Clear
+          </button>
+
+          <div
+            onclick="change_color(this)"
+            class="color-field"
+            style="background: red"
+          ></div>
+          <div
+            onClick="change_color(this)"
+            class="color-field"
+            style="background: blue"
+          ></div>
+          <div
+            onClick="change_color(this)"
+            class="color-field"
+            style="background: green"
+          ></div>
+          <div
+            onClick="change_color(this)"
+            class="color-field"
+            style="background: yellow"
+          ></div>
+          <div
+            onClick="change_color(this)"
+            class="color-field"
+            style="background: black"
+          ></div>
+          <input
+            oninput="draw_color=this.value"
+            type="color"
+            class="color-picker"
+          />
+        </div>
+        <a class="close-btn popup-close" href="#">x</a>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
